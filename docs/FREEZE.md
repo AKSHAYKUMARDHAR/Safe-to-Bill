@@ -38,3 +38,19 @@ Recorded 2026-11-20T10:34:02Z, before any rule, model or prompt read `holdout2.j
 | `safe_to_bill/rules_extractor.py` | `66d16e3a280e0ef88c46c74313cd3084691d4eb9f5099ab424fdb2aa9d88fb8c` |
 | `safe_to_bill/llm_extractor.py` | `b6d8e738cdf45e0c6e4d678d98bab9d702ec83d5162235c5db80be9c639aae86` |
 | `safe_to_bill/check.py` | `04c125c078656983882feae7e6a55e4b7af6cde5a186531f60f83863dc92c0d1` |
+
+## Checking these hashes against git (added after release run 2)
+
+The hashes above were taken on a Windows working copy; git stores every file with LF line endings.
+All data, guide, plan and prompt hashes match the committed files as stored. Two exceptions:
+
+- `safe_to_bill/rules_extractor.py` (`66d16e3a…`) was saved with CRLF line endings at the time; it
+  matches the committed file with CRLF endings: `git show <commit>:safe_to_bill/rules_extractor.py | sed 's/$/\r/' | sha256sum`.
+- The **release-run-1** versions of `safe_to_bill/verify.py` (`16f0bbe3…`) and
+  `safe_to_bill/llm_extractor.py` (`02d1f78d…`) were changed (stitched quotes, cache-only
+  re-scoring) before the repository's first commit, so those exact files are not in git history.
+  Their run-1 behaviour is kept as verifier `v1`, and re-scoring run 1 from the answer cache with
+  `--verifier v1` reproduces the logged run exactly (`eval/runs/*_holdout_release-reproduced.json`).
+
+The run-2 freeze (holdout2, its plan, the v2 verifier, prompt and code) was committed and pushed at
+`c4bebe4` before release run 2 read the notes.
