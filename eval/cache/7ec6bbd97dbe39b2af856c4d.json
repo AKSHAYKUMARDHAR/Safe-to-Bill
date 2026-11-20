@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"threat_to_life_or_function\",\n      \"name\": \"anaphylaxis\",\n      \"quote\": \"33M stung by a bee 20 minutes ago, now throat tightness, hives, wheezing, BP 88/54. A/P: anaphylaxis.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"hospitalization_or_escalation\",\n      \"name\": \"emergency transfer to the ED\",\n      \"quote\": \"EMS called for emergency transfer to the ED; observed until EMS arrival.\"\n    },\n    {\n      \"type\": \"parenteral_controlled_substance\",\n      \"name\": \"epinephrine administration\",\n      \"quote\": \"Epinephrine 0.3 mg IM given immediately.\"\n    }\n  ]\n}"
+}

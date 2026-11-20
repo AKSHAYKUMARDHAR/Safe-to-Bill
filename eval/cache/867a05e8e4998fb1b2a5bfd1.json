@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"chronic_exacerbation\",\n      \"name\": \"heart failure\",\n      \"quote\": \"chronic heart failure with exacerbation, mild. Furosemide increased from 20 mg to 40 mg daily; daily weights; cardiology follow-up this week.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Furosemide adjustment\",\n      \"quote\": \"Furosemide increased from 20 mg to 40 mg daily; daily weights; cardiology follow-up this week.\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"acute cystitis\",\n      \"quote\": \"acute cystitis, uncomplicated. Nitrofurantoin 100 mg BID x5d prescribed. RTC if fever or flank pain.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"review_external_note\",\n      \"name\": \"gynecologist records\",\n      \"quote\": \"reviewed records sent from her gynecologist's office: E. coli sensitive to nitrofurantoin.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"UA dip\",\n      \"quote\": \"UA dip ordered: + LE, + nitrite. Urine hCG ordered: negative.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Urine hCG\",\n      \"quote\": \"Urine hCG ordered: negative.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Nitrofurantoin\",\n      \"quote\": \"Nitrofurantoin 100 mg BID x5d prescribed. RTC if fever or flank pain.\"\n    }\n  ]\n}"
+}

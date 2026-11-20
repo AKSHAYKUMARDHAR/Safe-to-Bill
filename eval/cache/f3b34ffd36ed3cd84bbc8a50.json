@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"strep pharyngitis\",\n      \"quote\": \"A/P: strep pharyngitis. Amoxicillin 50 mg/kg/day for 10 days prescribed; may return to school after 12 hours\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"independent_historian\",\n      \"name\": \"Father\",\n      \"quote\": \"Father provides the history because the patient is 6 and cannot give a reliable timeline.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Rapid strep\",\n      \"quote\": \"Rapid strep ordered: positive.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Amoxicillin\",\n      \"quote\": \"Amoxicillin 50 mg/kg/day for 10 days prescribed; may return to school after 12 hours of antibiotics.\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"HTN\",\n      \"quote\": \"PMH (carried forward from prior visit): HTN, DM2, hyperlipidemia; not addressed today, managed by PCP.\"\n    },\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"DM2\",\n      \"quote\": \"PMH (carried forward from prior visit): HTN, DM2, hyperlipidemia; not addressed today, managed by PCP.\"\n    },\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"hyperlipidemia\",\n      \"quote\": \"PMH (carried forward from prior visit): HTN, DM2, hyperlipidemia; not addressed today, managed by PCP.\"\n    },\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"acute bronchitis\",\n      \"quote\": \"A/P: acute bronchitis. Benzonatate 100 mg TID prn prescribed, fluids, honey.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Benzonatate\",\n      \"quote\": \"Benzonatate 100 mg TID prn prescribed, fluids, honey.\"\n    }\n  ]\n}"
+}

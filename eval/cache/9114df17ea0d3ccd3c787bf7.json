@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"threat_to_life_or_function\",\n      \"name\": \"Cauda equina syndrome\",\n      \"quote\": \"A/P: suspected cauda equina syndrome. Sent to the emergency department now for emergency MRI and neurosurgery evaluation.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"hospitalization_or_escalation\",\n      \"name\": \"Transfer to Emergency Department\",\n      \"quote\": \"Sent to the emergency department now for emergency MRI and neurosurgery evaluation.\"\n    }\n  ]\n}"
+}

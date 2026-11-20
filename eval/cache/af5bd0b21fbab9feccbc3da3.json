@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"acute gastroenteritis\",\n      \"quote\": \"acute gastroenteritis, uncomplicated. Oral rehydration, loperamide OTC as needed.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"loperamide OTC\",\n      \"quote\": \"acute gastroenteritis, uncomplicated. Oral rehydration, loperamide OTC as needed.\"\n    }\n  ]\n}"
+}

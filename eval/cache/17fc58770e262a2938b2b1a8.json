@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"undiagnosed_uncertain\",\n      \"name\": \"ureteral stone\",\n      \"quote\": \"L flank pain with hematuria, suspected ureteral stone, undiagnosed, uncertain prognosis.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"urinalysis\",\n      \"quote\": \"UA ordered: large blood, no nitrites.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"CT abdomen and pelvis\",\n      \"quote\": \"Outpatient CT abdomen and pelvis stone protocol ordered for today.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"parenteral_controlled_substance\",\n      \"name\": \"Morphine\",\n      \"quote\": \"Morphine 4 mg IM given in clinic for pain, with relief.\"\n    },\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Tamsulosin and ondansetron\",\n      \"quote\": \"Tamsulosin 0.4 mg daily prescribed, ondansetron for nausea.\"\n    }\n  ]\n}"
+}

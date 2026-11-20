@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"undiagnosed_uncertain\",\n      \"name\": \"L axillary mass\",\n      \"quote\": \"L axillary mass, undiagnosed, uncertain prognosis. Diagnosis limited by social determinants of health (no insurance).\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"sdoh_limits_care\",\n      \"name\": \"financial constraints\",\n      \"quote\": \"She is uninsured and cannot afford an ultrasound, so I could not order imaging today\"\n    }\n  ]\n}"
+}

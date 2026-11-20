@@ -1,0 +1,142 @@
+{
+  "timestamp": "2026-11-20T10:34:55+00:00",
+  "split": "holdout2",
+  "n": 24,
+  "release": true,
+  "rescore": false,
+  "git_commit": "2120039",
+  "config": {
+    "model": "gemini-3.1-flash-lite",
+    "prompt_version": "v1",
+    "temperature": 1.0,
+    "ml_threshold": 0.92
+  },
+  "pipelines": {
+    "rules": {
+      "n": 24,
+      "level_accuracy": 0.833,
+      "decision_accuracy": 0.875,
+      "auto_bills": 11,
+      "wrong_auto_bills": 1,
+      "wrong_auto_bill_rate_95ci": [
+        0.016,
+        0.377
+      ],
+      "correct_claims": 12,
+      "correct_auto_billed": 10,
+      "automation": 0.833,
+      "overcoded": 7,
+      "overcoded_held": 6,
+      "undercoded": 5,
+      "undercoded_held": 5,
+      "not_confident": 3,
+      "errors": 0,
+      "quotes_not_in_note": 0,
+      "wrong_auto_bill_ids": [
+        "R01"
+      ],
+      "gate": {
+        "wrong_auto_bills_zero": false,
+        "overcoded_held_all_but_one": true,
+        "automation_at_least_50pct": true,
+        "quotes_all_in_note": true
+      },
+      "gate_pass": false
+    },
+    "ml": {
+      "n": 24,
+      "level_accuracy": 0.667,
+      "decision_accuracy": 0.5,
+      "auto_bills": 0,
+      "wrong_auto_bills": 0,
+      "wrong_auto_bill_rate_95ci": [
+        0.0,
+        1.0
+      ],
+      "correct_claims": 12,
+      "correct_auto_billed": 0,
+      "automation": 0.0,
+      "overcoded": 7,
+      "overcoded_held": 7,
+      "undercoded": 5,
+      "undercoded_held": 5,
+      "not_confident": 22,
+      "errors": 0,
+      "quotes_not_in_note": 0,
+      "wrong_auto_bill_ids": [],
+      "gate": {
+        "wrong_auto_bills_zero": true,
+        "overcoded_held_all_but_one": true,
+        "automation_at_least_50pct": false,
+        "quotes_all_in_note": true
+      },
+      "gate_pass": false
+    },
+    "llm": {
+      "n": 24,
+      "level_accuracy": 0.833,
+      "decision_accuracy": 0.875,
+      "auto_bills": 13,
+      "wrong_auto_bills": 2,
+      "wrong_auto_bill_rate_95ci": [
+        0.043,
+        0.422
+      ],
+      "correct_claims": 12,
+      "correct_auto_billed": 11,
+      "automation": 0.917,
+      "overcoded": 7,
+      "overcoded_held": 6,
+      "undercoded": 5,
+      "undercoded_held": 4,
+      "not_confident": 2,
+      "errors": 0,
+      "quotes_not_in_note": 0,
+      "wrong_auto_bill_ids": [
+        "R11",
+        "R16"
+      ],
+      "gate": {
+        "wrong_auto_bills_zero": false,
+        "overcoded_held_all_but_one": true,
+        "automation_at_least_50pct": true,
+        "quotes_all_in_note": true
+      },
+      "gate_pass": false
+    },
+    "llm1": {
+      "n": 24,
+      "level_accuracy": 0.833,
+      "decision_accuracy": 0.875,
+      "auto_bills": 13,
+      "wrong_auto_bills": 2,
+      "wrong_auto_bill_rate_95ci": [
+        0.043,
+        0.422
+      ],
+      "correct_claims": 12,
+      "correct_auto_billed": 11,
+      "automation": 0.917,
+      "overcoded": 7,
+      "overcoded_held": 6,
+      "undercoded": 5,
+      "undercoded_held": 4,
+      "not_confident": 2,
+      "errors": 0,
+      "quotes_not_in_note": 0,
+      "wrong_auto_bill_ids": [
+        "R11",
+        "R16"
+      ],
+      "gate": {
+        "wrong_auto_bills_zero": false,
+        "overcoded_held_all_but_one": true,
+        "automation_at_least_50pct": true,
+        "quotes_all_in_note": true
+      },
+      "gate_pass": false
+    }
+  },
+  "llm_calls": 54,
+  "llm_cache_hits": 24
+}

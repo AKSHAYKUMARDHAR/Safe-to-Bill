@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"self_limited_minor\",\n      \"name\": \"Common cold\",\n      \"quote\": \"Common cold (viral URI). Supportive care, honey for cough, guaifenesin OTC. Return or go to ED\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"OTC medication recommendation\",\n      \"quote\": \"Supportive care, honey for cough, guaifenesin OTC. Return or go to ED if trouble breathing\"\n    }\n  ]\n}"
+}

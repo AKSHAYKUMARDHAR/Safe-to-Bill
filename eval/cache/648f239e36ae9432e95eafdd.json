@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"Hypertension\",\n      \"quote\": \"HTN: BP 126/78 on losartan 50 mg, stable.\"\n    },\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"Type 2 Diabetes\",\n      \"quote\": \"DM2: home fasting sugars 100-120 on metformin, stable.\"\n    },\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"Hyperlipidemia\",\n      \"quote\": \"Hyperlipidemia: on atorvastatin 20 mg, no side effects, stable.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Medication Refills\",\n      \"quote\": \"Losartan, metformin and atorvastatin refilled for 90 days; establish with a new PCP.\"\n    }\n  ]\n}"
+}

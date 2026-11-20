@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"self_limited_minor\",\n      \"name\": \"mild sunburn\",\n      \"quote\": \"Sunburn on the face and shoulders after a beach day, no blisters.\"\n    },\n    {\n      \"type\": \"self_limited_minor\",\n      \"name\": \"superficial elbow abrasion\",\n      \"quote\": \"Scraped her L elbow on concrete yesterday, small superficial abrasion, clean.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"ibuprofen OTC\",\n      \"quote\": \"Aloe gel and ibuprofen OTC; abrasion cleaned and covered.\"\n    }\n  ]\n}"
+}

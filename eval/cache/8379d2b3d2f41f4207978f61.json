@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"R ankle sprain\",\n      \"quote\": \"A/P: R ankle sprain, moderate. Air-cast brace, crutches, ibuprofen OTC, RICE. Ortho f/u if not improving in 2 wks.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"XR R ankle 3 views\",\n      \"quote\": \"XR R ankle 3 views ordered; radiology report reviewed: no fracture, soft tissue swelling.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"Air-cast brace, crutches, ibuprofen OTC, RICE\",\n      \"quote\": \"Air-cast brace, crutches, ibuprofen OTC, RICE. Ortho f/u if not improving in 2 wks.\"\n    }\n  ]\n}"
+}

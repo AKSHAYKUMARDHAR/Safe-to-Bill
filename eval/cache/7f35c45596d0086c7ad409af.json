@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"acute cervical strain\",\n      \"quote\": \"31F with neck pain after a low-speed rear-end collision yesterday. No numbness, no weakness, full range\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"ibuprofen heat stretching\",\n      \"quote\": \"A/P: acute cervical strain. Ibuprofen OTC, heat, gentle stretching.\"\n    }\n  ]\n}"
+}

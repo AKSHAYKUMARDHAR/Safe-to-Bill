@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"chronic_severe_exacerbation\",\n      \"name\": \"asthma\",\n      \"quote\": \"22F with asthma, severe attack since this afternoon. SpO2 88%, speaking in single words, tight air movement.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Prednisolone\",\n      \"quote\": \"severe asthma exacerbation, not responding to treatment. Prednisolone 60 mg PO given.\"\n    },\n    {\n      \"type\": \"hospitalization_or_escalation\",\n      \"name\": \"transfer to ED\",\n      \"quote\": \"EMS called for transfer to the ED for admission.\"\n    }\n  ]\n}"
+}

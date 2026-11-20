@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"viral conjunctivitis\",\n      \"quote\": \"25M with a red, watery R eye for 2 days after a cold, no pain, vision normal\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"minimal_risk\",\n      \"name\": \"Cool compresses and artificial tears\",\n      \"quote\": \"Cool compresses, artificial tears OTC, hand hygiene; contagious for about a week.\"\n    }\n  ]\n}"
+}

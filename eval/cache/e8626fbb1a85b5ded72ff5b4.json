@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"chronic_exacerbation\",\n      \"name\": \"gout\",\n      \"quote\": \"70M with gout, painful swollen R knee since yesterday, same as prior flares\"\n    },\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"type 2 diabetes\",\n      \"quote\": \"Also has type 2 diabetes, stable on metformin; steroids avoided today because of the diabetes\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"review_test_result\",\n      \"name\": \"Kidney function\",\n      \"quote\": \"Kidney function normal last month per PCP\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Colchicine\",\n      \"quote\": \"Colchicine prescribed; metformin continued\"\n    }\n  ]\n}"
+}

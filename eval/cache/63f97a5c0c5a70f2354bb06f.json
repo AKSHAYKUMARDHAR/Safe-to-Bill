@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"acute gastroenteritis\",\n      \"quote\": \"A/P: acute gastroenteritis, well hydrated. Oral rehydration at home.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"independent_historian\",\n      \"name\": \"history from mother\",\n      \"quote\": \"History from mother because the patient is 3 and cannot describe his symptoms.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Ondansetron\",\n      \"quote\": \"Ondansetron 2 mg ODT given in clinic; passed an oral fluid challenge.\"\n    }\n  ]\n}"
+}

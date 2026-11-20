@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"mild croup\",\n      \"quote\": \"4 y/o F with barky cough since last night, hoarse voice, low-grade fever. A/P: mild croup\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"independent_historian\",\n      \"name\": \"History from mother\",\n      \"quote\": \"History from mother; the patient is 4 and cannot describe her symptoms\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Dexamethasone\",\n      \"quote\": \"Dexamethasone 0.6 mg/kg PO given in clinic\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"acute bacterial sinusitis\",\n      \"quote\": \"facial pressure, purulent nasal discharge and congestion for 12 days, not improving. A/P: acute bacterial sinusitis\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Amoxicillin-clavulanate\",\n      \"quote\": \"Amoxicillin-clavulanate 875 mg BID for 7 days prescribed, saline rinses.\"\n    }\n  ]\n}"
+}

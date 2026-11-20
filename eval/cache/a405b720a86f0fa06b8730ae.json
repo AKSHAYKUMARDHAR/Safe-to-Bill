@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"COPD\",\n      \"quote\": \"68F with COPD, followed by pulmonology. 4 days of fever 101.4, productive cough, more short of breath than usual.\"\n    },\n    {\n      \"type\": \"acute_systemic\",\n      \"name\": \"community-acquired pneumonia\",\n      \"quote\": \"A/P: community-acquired pneumonia, outpatient-appropriate. Amoxicillin-clavulanate and azithromycin prescribed; recheck in 48 hours.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Chest X-ray\",\n      \"quote\": \"Chest X-ray ordered; my read: RLL infiltrate; radiology read pending.\"\n    },\n    {\n      \"type\": \"independent_interpretation\",\n      \"name\": \"Chest X-ray\",\n      \"quote\": \"Chest X-ray ordered; my read: RLL infiltrate; radiology read pending.\"\n    },\n    {\n      \"type\": \"discussion_external\",\n      \"name\": \"Dr. Iyer\",\n      \"quote\": \"Discussed with her pulmonologist, Dr. Iyer, by phone: agrees with outpatient treatment.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"antibiotics\",\n      \"quote\": \"Amoxicillin-clavulanate and azithromycin prescribed; recheck in 48 hours.\"\n    }\n  ]\n}"
+}
