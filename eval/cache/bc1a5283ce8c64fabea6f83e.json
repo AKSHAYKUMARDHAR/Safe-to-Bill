@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"acute otitis media\",\n      \"quote\": \"Assessment: acute otitis media; suspected acute stroke.\"\n    },\n    {\n      \"type\": \"threat_to_life_or_function\",\n      \"name\": \"suspected acute stroke\",\n      \"quote\": \"Assessment: acute otitis media; suspected acute stroke.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Urine culture\",\n      \"quote\": \"Urine culture ordered: negative.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Pregnancy test\",\n      \"quote\": \"Pregnancy test ordered: positive.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Fingerstick glucose\",\n      \"quote\": \"Fingerstick glucose was ordered and came back positive.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"hospitalization_or_escalation\",\n      \"name\": \"ED transfer\",\n      \"quote\": \"Sent to the emergency department for evaluation and possible admission.\"\n    }\n  ]\n}"
+}

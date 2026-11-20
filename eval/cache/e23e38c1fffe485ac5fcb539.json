@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"chronic_exacerbation\",\n      \"name\": \"asthma exacerbation\",\n      \"quote\": \"58F with known asthma, wheezing and chest tightness for 1 day after a cold. Assessment: asthma exacerbation, moderate.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"prednisone\",\n      \"quote\": \"Plan: prednisone 40 mg daily for 5 days prescribed, continue albuterol as needed.\"\n    }\n  ]\n}"
+}

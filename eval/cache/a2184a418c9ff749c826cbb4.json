@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"acute viral gastroenteritis\",\n      \"quote\": \"Assessment: acute viral gastroenteritis without significant dehydration.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"urine pregnancy test\",\n      \"quote\": \"Urine pregnancy test ordered: negative.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"ondansetron 4 mg ODT\",\n      \"quote\": \"Plan: ondansetron 4 mg ODT prescribed, oral rehydration.\"\n    }\n  ]\n}"
+}

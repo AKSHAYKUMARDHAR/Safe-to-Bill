@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-11-20T09:16:22+00:00",
+  "split": "dev",
+  "n": 1,
+  "release": false,
+  "rescore": false,
+  "git_commit": null,
+  "config": {
+    "model": "gemini-3.1-flash-lite",
+    "prompt_version": "v1",
+    "temperature": 1.0,
+    "ml_threshold": null
+  },
+  "pipelines": {
+    "llm1": {
+      "n": 1,
+      "level_accuracy": 1.0,
+      "decision_accuracy": 1.0,
+      "auto_bills": 1,
+      "wrong_auto_bills": 0,
+      "wrong_auto_bill_rate_95ci": [
+        0.0,
+        0.793
+      ],
+      "correct_claims": 1,
+      "correct_auto_billed": 1,
+      "automation": 1.0,
+      "overcoded": 0,
+      "overcoded_held": 0,
+      "undercoded": 0,
+      "undercoded_held": 0,
+      "not_confident": 0,
+      "errors": 0,
+      "quotes_not_in_note": 0,
+      "wrong_auto_bill_ids": [],
+      "gate": {
+        "wrong_auto_bills_zero": true,
+        "overcoded_held_all_but_one": true,
+        "automation_at_least_50pct": true,
+        "quotes_all_in_note": true
+      },
+      "gate_pass": true
+    }
+  },
+  "llm_calls": 1,
+  "llm_cache_hits": 0
+}

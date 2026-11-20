@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"undiagnosed_uncertain\",\n      \"name\": \"new painless jaundice\",\n      \"quote\": \"Assessment: new painless jaundice, undiagnosed, uncertain prognosis.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"review_test_result\",\n      \"name\": \"liver test results\",\n      \"quote\": \"Reviewed his liver test results from last month at another clinic: normal then.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"CMP and CBC\",\n      \"quote\": \"Ordered CMP and CBC today.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"urgent outpatient GI referral\",\n      \"quote\": \"urgent outpatient GI referral placed; ED if abdominal pain or confusion.\"\n    }\n  ]\n}"
+}

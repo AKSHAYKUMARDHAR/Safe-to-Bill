@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"chronic_exacerbation\",\n      \"name\": \"COPD\",\n      \"quote\": \"71F with COPD, worsening shortness of breath for 2 days, now SpO2 86% on room air\"\n    },\n    {\n      \"type\": \"threat_to_life_or_function\",\n      \"name\": \"acute hypoxic respiratory failure\",\n      \"quote\": \"Assessment: acute hypoxic respiratory failure, likely COPD exacerbation versus pneumonia\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"review_external_note\",\n      \"name\": \"hospital discharge summary\",\n      \"quote\": \"Reviewed her hospital discharge summary from last month for a COPD admission\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Chest X-ray\",\n      \"quote\": \"Chest X-ray ordered\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Oxygen\",\n      \"quote\": \"Oxygen started at 2 L by nasal cannula\"\n    },\n    {\n      \"type\": \"hospitalization_or_escalation\",\n      \"name\": \"transfer to the ED\",\n      \"quote\": \"Plan: transfer to the ED by ambulance for admission\"\n    }\n  ]\n}"
+}

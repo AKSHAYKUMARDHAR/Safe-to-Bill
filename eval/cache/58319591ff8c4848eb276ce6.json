@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"chronic_exacerbation\",\n      \"name\": \"gout flare\",\n      \"quote\": \"68F with a hot swollen big toe, known gout and fever, chills and productive cough for\"\n    },\n    {\n      \"type\": \"acute_systemic\",\n      \"name\": \"community-acquired pneumonia\",\n      \"quote\": \"chills and productive cough for 4 days. Assessment: gout flare; community-acquired pneumonia. Plan: Refilled the\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"urinalysis\",\n      \"quote\": \"Ordered a urinalysis, result normal. Assessment: gout flare; community-acquired pneumonia. Plan: Refilled the usual medication\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"refill medication\",\n      \"quote\": \"Plan: Refilled the usual medication for 90 days.\"\n    }\n  ]\n}"
+}

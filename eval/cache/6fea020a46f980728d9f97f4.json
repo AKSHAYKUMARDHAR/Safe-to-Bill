@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"Type 2 diabetes\",\n      \"quote\": \"66M with type 2 diabetes, 2 weeks of increased thirst and urination.\"\n    },\n    {\n      \"type\": \"chronic_exacerbation\",\n      \"name\": \"Hyperglycemia\",\n      \"quote\": \"Assessment: type 2 diabetes with worsening control (hyperglycemia), no signs of DKA.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Fingerstick glucose\",\n      \"quote\": \"Fingerstick glucose ordered in clinic: 320.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Start glipizide\",\n      \"quote\": \"Plan: started glipizide 5 mg daily, diet review, PCP follow-up within 1 week.\"\n    }\n  ]\n}"
+}

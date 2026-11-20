@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"self_limited_minor\",\n      \"name\": \"Superficial first-degree burn\",\n      \"quote\": \"37F burned the back of her hand on an oven rack 1 hour ago. 2 cm area\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"Acetaminophen OTC\",\n      \"quote\": \"Plan: aloe vera gel and acetaminophen OTC as needed.\"\n    }\n  ]\n}"
+}

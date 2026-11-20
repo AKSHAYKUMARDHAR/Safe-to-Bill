@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"undiagnosed_uncertain\",\n      \"name\": \"left breast mass\",\n      \"quote\": \"38F felt a lump in the left breast 1 week ago, not tender, no nipple discharge, no skin change\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"diagnostic mammogram\",\n      \"quote\": \"ordered diagnostic mammogram and left breast ultrasound; referred to breast surgery\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"left breast ultrasound\",\n      \"quote\": \"ordered diagnostic mammogram and left breast ultrasound; referred to breast surgery\"\n    }\n  ],\n  \"risk\": []\n}"
+}

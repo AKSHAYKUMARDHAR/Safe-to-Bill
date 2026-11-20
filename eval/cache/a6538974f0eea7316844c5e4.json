@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"self_limited_minor\",\n      \"name\": \"knee abrasion\",\n      \"quote\": \"Small abrasion on the left knee, about 3 x 2 cm, no deep tissue involvement, full ROM\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"minimal_risk\",\n      \"name\": \"wound care\",\n      \"quote\": \"Wound cleaned with saline and covered with a nonstick bandage\"\n    }\n  ]\n}"
+}

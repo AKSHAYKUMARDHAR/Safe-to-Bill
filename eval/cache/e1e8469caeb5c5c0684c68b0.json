@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"post-viral cough\",\n      \"quote\": \"62F with a dry cough for 2 weeks after a cold. No fever, no shortness of breath\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Chest X-ray\",\n      \"quote\": \"Chest X-ray ordered; radiology report reviewed: no infiltrate, no effusion.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"COVID-19 antigen test\",\n      \"quote\": \"COVID-19 antigen test ordered: negative.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"dextromethorphan\",\n      \"quote\": \"Plan: honey, dextromethorphan OTC at night, recheck if not better in 2 weeks.\"\n    }\n  ]\n}"
+}

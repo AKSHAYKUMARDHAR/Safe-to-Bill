@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"self_limited_minor\",\n      \"name\": \"tick bite\",\n      \"quote\": \"tick bite, no signs of infection\"\n    },\n    {\n      \"type\": \"self_limited_minor\",\n      \"name\": \"friction blister\",\n      \"quote\": \"friction blister, right heel\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"minimal_risk\",\n      \"name\": \"observation and dressing\",\n      \"quote\": \"observe the bite site, cover the blister with a padded dressing\"\n    }\n  ]\n}"
+}

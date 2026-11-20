@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"Hypertension\",\n      \"quote\": \"Hypertension, stable on lisinopril 20 mg, BP 124/80\"\n    },\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"Type 2 diabetes\",\n      \"quote\": \"Type 2 diabetes, stable on metformin 1000 mg twice daily\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"review_external_note\",\n      \"name\": \"PCP visit note\",\n      \"quote\": \"reviewed his PCP visit note from June: A1c 6.6%. No symptoms\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"lisinopril and metformin refills\",\n      \"quote\": \"lisinopril and metformin refilled for 90 days\"\n    }\n  ]\n}"
+}

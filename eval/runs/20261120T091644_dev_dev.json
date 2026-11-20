@@ -1,0 +1,76 @@
+{
+  "timestamp": "2026-11-20T09:16:44+00:00",
+  "split": "dev",
+  "n": 12,
+  "release": false,
+  "rescore": false,
+  "git_commit": null,
+  "config": {
+    "model": "gemini-3.1-flash-lite",
+    "prompt_version": "v1",
+    "temperature": 1.0,
+    "ml_threshold": null
+  },
+  "pipelines": {
+    "llm": {
+      "n": 12,
+      "level_accuracy": 1.0,
+      "decision_accuracy": 0.917,
+      "auto_bills": 5,
+      "wrong_auto_bills": 0,
+      "wrong_auto_bill_rate_95ci": [
+        0.0,
+        0.434
+      ],
+      "correct_claims": 6,
+      "correct_auto_billed": 5,
+      "automation": 0.833,
+      "overcoded": 5,
+      "overcoded_held": 5,
+      "undercoded": 1,
+      "undercoded_held": 1,
+      "not_confident": 1,
+      "errors": 0,
+      "quotes_not_in_note": 0,
+      "wrong_auto_bill_ids": [],
+      "gate": {
+        "wrong_auto_bills_zero": true,
+        "overcoded_held_all_but_one": true,
+        "automation_at_least_50pct": true,
+        "quotes_all_in_note": true
+      },
+      "gate_pass": true
+    },
+    "llm1": {
+      "n": 12,
+      "level_accuracy": 1.0,
+      "decision_accuracy": 1.0,
+      "auto_bills": 6,
+      "wrong_auto_bills": 0,
+      "wrong_auto_bill_rate_95ci": [
+        0.0,
+        0.39
+      ],
+      "correct_claims": 6,
+      "correct_auto_billed": 6,
+      "automation": 1.0,
+      "overcoded": 5,
+      "overcoded_held": 5,
+      "undercoded": 1,
+      "undercoded_held": 1,
+      "not_confident": 0,
+      "errors": 0,
+      "quotes_not_in_note": 0,
+      "wrong_auto_bill_ids": [],
+      "gate": {
+        "wrong_auto_bills_zero": true,
+        "overcoded_held_all_but_one": true,
+        "automation_at_least_50pct": true,
+        "quotes_all_in_note": true
+      },
+      "gate_pass": true
+    }
+  },
+  "llm_calls": 23,
+  "llm_cache_hits": 13
+}

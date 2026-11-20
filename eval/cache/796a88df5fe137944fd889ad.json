@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"stable_acute\",\n      \"name\": \"cellulitis\",\n      \"quote\": \"20F with a recheck of cellulitis on day 4 of antibiotics. Assessment: cellulitis, improving.\"\n    },\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"urinary tract infection\",\n      \"quote\": \"Urinalysis ordered: positive.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Rapid influenza test\",\n      \"quote\": \"Rapid influenza test ordered: normal.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Pregnancy test\",\n      \"quote\": \"Ordered a pregnancy test, result negative.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Urinalysis\",\n      \"quote\": \"Urinalysis ordered: positive.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Amoxicillin\",\n      \"quote\": \"Plan: Amoxicillin prescribed for 10 days.\"\n    }\n  ]\n}"
+}

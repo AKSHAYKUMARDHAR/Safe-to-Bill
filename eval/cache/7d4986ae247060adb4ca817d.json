@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"Hypertension\",\n      \"quote\": \"Hypertension, stable, BP 128/78. Assessment: essential hypertension, stable.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"amlodipine\",\n      \"quote\": \"Plan: refilled amlodipine 5 mg daily.\"\n    }\n  ]\n}"
+}

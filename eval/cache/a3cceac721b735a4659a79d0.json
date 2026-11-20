@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"Ankle sprain\",\n      \"quote\": \"64M with ankle pain after twisting it on a step. Assessment: ankle sprain.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Chest X-ray\",\n      \"quote\": \"Ordered a chest X-ray, result normal.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"minimal_risk\",\n      \"name\": \"Rest and fluids\",\n      \"quote\": \"Plan: Rest and fluids.\"\n    }\n  ]\n}"
+}

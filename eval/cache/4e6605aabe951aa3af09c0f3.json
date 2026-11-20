@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"left wrist sprain\",\n      \"quote\": \"31F fell on her left wrist while skating yesterday. Snuffbox not tender, mild swelling dorsally. Assessment: left wrist sprain.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"X-ray of the left wrist\",\n      \"quote\": \"X-ray of the left wrist ordered; radiology report reviewed: no fracture. Assessment: left wrist sprain.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"wrist brace and ibuprofen\",\n      \"quote\": \"Plan: wrist brace, ibuprofen OTC, ice.\"\n    }\n  ]\n}"
+}

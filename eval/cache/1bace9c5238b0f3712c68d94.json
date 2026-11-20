@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"self_limited_minor\",\n      \"name\": \"common cold\",\n      \"quote\": \"Impression: common cold (viral URI), self-limited.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"minimal_risk\",\n      \"name\": \"saline nasal spray, fluids, rest\",\n      \"quote\": \"Plan: saline nasal spray OTC, fluids, rest.\"\n    }\n  ]\n}"
+}

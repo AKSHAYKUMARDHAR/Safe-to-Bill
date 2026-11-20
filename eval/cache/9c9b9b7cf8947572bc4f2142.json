@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"hypothyroidism\",\n      \"quote\": \"Assessment: hypothyroidism, stable on treatment.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"fingerstick glucose\",\n      \"quote\": \"Ordered a fingerstick glucose, result positive.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"levothyroxine refill\",\n      \"quote\": \"60F with a thyroid medication refill.\"\n    },\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Cephalexin\",\n      \"quote\": \"Plan: Cephalexin 500 mg prescribed.\"\n    }\n  ]\n}"
+}

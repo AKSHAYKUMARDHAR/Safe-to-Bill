@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"threat_to_life_or_function\",\n      \"name\": \"suspected acute stroke\",\n      \"quote\": \"67M with sudden weakness of the left arm and slurred speech that began 30 minutes ago\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"hospitalization_or_escalation\",\n      \"name\": \"emergency transfer to ED\",\n      \"quote\": \"EMS called for emergency transfer to the ED with a stroke alert\"\n    }\n  ]\n}"
+}

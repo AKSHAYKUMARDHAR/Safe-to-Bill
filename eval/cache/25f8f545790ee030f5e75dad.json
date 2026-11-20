@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"type 2 diabetes\",\n      \"quote\": \"Assessment: type 2 diabetes, at goal.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Chest X-ray\",\n      \"quote\": \"Chest X-ray was ordered and came back positive.\"\n    },\n    {\n      \"type\": \"independent_interpretation\",\n      \"name\": \"Chest X-ray interpretation\",\n      \"quote\": \"My read of the film: no pneumothorax; radiology over-read pending.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"diabetes medication refill\",\n      \"quote\": \"18M with a diabetes medication refill.\"\n    },\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"Acetaminophen\",\n      \"quote\": \"Plan: Acetaminophen OTC and rest.\"\n    }\n  ]\n}"
+}

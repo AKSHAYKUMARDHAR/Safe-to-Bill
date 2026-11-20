@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"chronic_exacerbation\",\n      \"name\": \"GERD\",\n      \"quote\": \"GERD, worsening on current therapy. Plan: increased omeprazole to 40 mg daily and added famotidine at bedtime\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Omeprazole and Famotidine\",\n      \"quote\": \"increased omeprazole to 40 mg daily and added famotidine at bedtime, prescriptions sent\"\n    }\n  ]\n}"
+}

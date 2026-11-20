@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"chronic_severe_exacerbation\",\n      \"name\": \"severe asthma exacerbation\",\n      \"quote\": \"39F with a severe asthma attack not relieved by repeated inhaler use. Assessment: severe asthma exacerbation.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Rapid influenza test\",\n      \"quote\": \"Rapid influenza test was ordered and came back normal.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Rapid strep\",\n      \"quote\": \"Rapid strep ordered: normal.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Chest X-ray\",\n      \"quote\": \"Chest X-ray ordered: negative.\"\n    },\n    {\n      \"type\": \"discussion_external\",\n      \"name\": \"Dr. Rao\",\n      \"quote\": \"Discussed the case with the on-call specialist, Dr. Rao.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Refilled asthma medication\",\n      \"quote\": \"Plan: Refilled the usual medication for 90 days.\"\n    }\n  ]\n}"
+}

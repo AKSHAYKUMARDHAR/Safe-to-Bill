@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"acute otitis media\",\n      \"quote\": \"Assessment: acute otitis media.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"chest X-ray\",\n      \"quote\": \"Ordered a chest X-ray, result normal.\"\n    },\n    {\n      \"type\": \"independent_interpretation\",\n      \"name\": \"chest X-ray\",\n      \"quote\": \"My read of the film: no pneumothorax; radiology over-read pending.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"fingerstick glucose\",\n      \"quote\": \"Fingerstick glucose was ordered and came back negative.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"ibuprofen\",\n      \"quote\": \"Plan: Brace and ibuprofen OTC.\"\n    }\n  ]\n}"
+}

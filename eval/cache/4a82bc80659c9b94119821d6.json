@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"acute lumbar strain\",\n      \"quote\": \"Assessment: acute lumbar strain, no red flags. Plan: ibuprofen OTC, heat, gentle activity, physical therapy referral if not better\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"ibuprofen OTC\",\n      \"quote\": \"Plan: ibuprofen OTC, heat, gentle activity, physical therapy referral if not better in 2 weeks.\"\n    }\n  ]\n}"
+}

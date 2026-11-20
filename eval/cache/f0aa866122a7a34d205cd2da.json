@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"essential hypertension\",\n      \"quote\": \"Hypertension, stable on amlodipine 5 mg; BP today 128/78, no headache, chest pain or swelling\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"amlodipine refill\",\n      \"quote\": \"Plan: refilled amlodipine 5 mg daily, 30 days, follow up with PCP\"\n    }\n  ]\n}"
+}

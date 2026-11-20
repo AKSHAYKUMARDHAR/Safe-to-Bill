@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"acute otitis media\",\n      \"quote\": \"Assessment: acute otitis media, left, with fever. Plan: amoxicillin 90 mg/kg/day prescribed, ibuprofen OTC for fever.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"independent_historian\",\n      \"name\": \"mother\",\n      \"quote\": \"History from mother; patient is a toddler and cannot describe symptoms. Drinking well, playful. Left TM bulging and red.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"amoxicillin\",\n      \"quote\": \"Plan: amoxicillin 90 mg/kg/day prescribed, ibuprofen OTC for fever.\"\n    },\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"ibuprofen\",\n      \"quote\": \"Plan: amoxicillin 90 mg/kg/day prescribed, ibuprofen OTC for fever.\"\n    }\n  ]\n}"
+}

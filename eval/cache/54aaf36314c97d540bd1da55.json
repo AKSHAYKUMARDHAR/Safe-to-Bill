@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"Hypothyroidism\",\n      \"quote\": \"Hypothyroidism, stable on levothyroxine 75 mcg; reviewed her TSH result from last month: 2.1, in range.\"\n    },\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"Depression\",\n      \"quote\": \"Depression, stable on sertraline 100 mg, PHQ-2 negative today. Assessment: hypothyroidism, stable; depression, stable.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"review_test_result\",\n      \"name\": \"TSH result\",\n      \"quote\": \"reviewed her TSH result from last month: 2.1, in range.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"levothyroxine and sertraline\",\n      \"quote\": \"Plan: levothyroxine and sertraline refilled.\"\n    }\n  ]\n}"
+}

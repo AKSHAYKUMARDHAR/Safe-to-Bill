@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"chronic_exacerbation\",\n      \"name\": \"GERD\",\n      \"quote\": \"heartburn for years, worse for 1 month despite omeprazole 20 mg daily, now waking at night\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"omeprazole and famotidine\",\n      \"quote\": \"increased omeprazole to 40 mg daily and added famotidine at bedtime, prescriptions sent\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"chronic_exacerbation\",\n      \"name\": \"gout\",\n      \"quote\": \"acute gout flare (chronic gout with exacerbation)\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"review_external_note\",\n      \"name\": \"rheumatology clinic note\",\n      \"quote\": \"Reviewed his rheumatology clinic note from last year: diagnosis confirmed by joint aspiration then\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"colchicine\",\n      \"quote\": \"Plan: colchicine prescribed, continue allopurinol, ice and rest\"\n    }\n  ]\n}"
+}

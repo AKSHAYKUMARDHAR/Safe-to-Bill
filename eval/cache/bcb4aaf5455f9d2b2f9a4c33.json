@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"right ankle sprain\",\n      \"quote\": \"Assessment: right ankle sprain, grade 1.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"ankle brace\",\n      \"quote\": \"Plan: RICE, ankle brace, ibuprofen OTC 400 mg every 6 hours as needed.\"\n    },\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"ibuprofen OTC\",\n      \"quote\": \"Plan: RICE, ankle brace, ibuprofen OTC 400 mg every 6 hours as needed.\"\n    }\n  ]\n}"
+}

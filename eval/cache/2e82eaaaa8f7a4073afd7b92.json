@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"bacterial conjunctivitis\",\n      \"quote\": \"Assessment: acute bacterial conjunctivitis, left eye. Plan: erythromycin ophthalmic ointment prescribed, apply 4 times daily for 5 days\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"erythromycin ophthalmic ointment\",\n      \"quote\": \"Plan: erythromycin ophthalmic ointment prescribed, apply 4 times daily for 5 days; hand hygiene.\"\n    }\n  ]\n}"
+}

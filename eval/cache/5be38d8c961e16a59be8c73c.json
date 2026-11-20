@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"mild intermittent asthma\",\n      \"quote\": \"11 y/o M, mild intermittent asthma, needs an albuterol inhaler refill for school. Patient reports no wheeze\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"albuterol HFA\",\n      \"quote\": \"Plan: albuterol HFA refilled, school inhaler form completed.\"\n    }\n  ]\n}"
+}

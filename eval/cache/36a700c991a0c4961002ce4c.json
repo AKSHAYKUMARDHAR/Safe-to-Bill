@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"acute conjunctivitis\",\n      \"quote\": \"Assessment: acute conjunctivitis; uncomplicated cystitis\"\n    },\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"uncomplicated cystitis\",\n      \"quote\": \"Assessment: acute conjunctivitis; uncomplicated cystitis\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Rapid influenza test\",\n      \"quote\": \"Rapid influenza test was ordered and came back positive\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"OTC medication and bracing\",\n      \"quote\": \"Plan: Brace and ibuprofen OTC\"\n    }\n  ]\n}"
+}

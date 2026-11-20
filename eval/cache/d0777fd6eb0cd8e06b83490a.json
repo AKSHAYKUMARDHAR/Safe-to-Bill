@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"acute uncomplicated cystitis\",\n      \"quote\": \"Assessment: acute uncomplicated cystitis\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"urinalysis\",\n      \"quote\": \"Urinalysis ordered: positive leukocyte esterase and nitrites\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"urine culture\",\n      \"quote\": \"Urine culture sent\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"nitrofurantoin\",\n      \"quote\": \"nitrofurantoin 100 mg twice daily for 5 days prescribed\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"self_limited_minor\",\n      \"name\": \"insect bite\",\n      \"quote\": \"69M with an itchy bump after a bug bite yesterday. Assessment: insect bite, local reaction.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"fingerstick glucose\",\n      \"quote\": \"Fingerstick glucose was ordered and came back normal.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"minimal_risk\",\n      \"name\": \"Rest and fluids\",\n      \"quote\": \"Plan: Rest and fluids.\"\n    }\n  ]\n}"
+}

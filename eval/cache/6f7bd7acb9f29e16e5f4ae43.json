@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"self_limited_minor\",\n      \"name\": \"splinter\",\n      \"quote\": \"15M with a splinter in the thumb. Assessment: splinter, removed.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"CBC\",\n      \"quote\": \"Ordered a CBC, result negative.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"minimal_risk\",\n      \"name\": \"rest and fluids\",\n      \"quote\": \"Plan: Rest and fluids.\"\n    }\n  ]\n}"
+}

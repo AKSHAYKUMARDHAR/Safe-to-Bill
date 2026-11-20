@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"acute otitis media\",\n      \"quote\": \"Assessment: acute otitis media, right.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"independent_historian\",\n      \"name\": \"mother\",\n      \"quote\": \"History obtained from mother; the patient is too young to give a reliable timeline of her symptoms.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"amoxicillin\",\n      \"quote\": \"amoxicillin 90 mg/kg/day divided twice daily for 10 days prescribed\"\n    }\n  ]\n}"
+}

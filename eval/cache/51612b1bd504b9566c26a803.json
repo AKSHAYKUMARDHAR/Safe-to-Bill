@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_systemic\",\n      \"name\": \"community-acquired pneumonia\",\n      \"quote\": \"fever 101.6, productive cough and chills for 4 days. Crackles at the left base, SpO2 95%\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Chest X-ray\",\n      \"quote\": \"Chest X-ray ordered; radiology report reviewed: left lower lobe infiltrate\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"COVID-19 test\",\n      \"quote\": \"COVID-19 test ordered: negative\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"antibiotics\",\n      \"quote\": \"amoxicillin-clavulanate and azithromycin prescribed, recheck in 2 days\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"chronic_exacerbation\",\n      \"name\": \"asthma exacerbation\",\n      \"quote\": \"80M with wheezing for 2 days after a cold, known asthma. Assessment: asthma exacerbation.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"COVID-19 test\",\n      \"quote\": \"COVID-19 test was ordered and came back positive.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"Refilled asthma medication\",\n      \"quote\": \"Plan: Refilled the usual medication for 90 days.\"\n    }\n  ]\n}"
+}

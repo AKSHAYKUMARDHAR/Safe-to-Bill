@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"ankle sprain\",\n      \"quote\": \"32M with ankle pain after twisting it on a step. Assessment: ankle sprain.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Fingerstick glucose\",\n      \"quote\": \"Fingerstick glucose was ordered and came back normal.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Chest X-ray\",\n      \"quote\": \"Chest X-ray was ordered and came back negative.\"\n    },\n    {\n      \"type\": \"independent_interpretation\",\n      \"name\": \"Chest X-ray\",\n      \"quote\": \"My read of the film: no pneumothorax; radiology over-read pending.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Urine culture\",\n      \"quote\": \"Urine culture was ordered and came back negative.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"Ibuprofen\",\n      \"quote\": \"Plan: Ibuprofen OTC as needed.\"\n    }\n  ]\n}"
+}

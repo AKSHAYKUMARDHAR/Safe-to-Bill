@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"type 2 diabetes\",\n      \"quote\": \"Assessment: type 2 diabetes, at goal.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"minimal_risk\",\n      \"name\": \"Acetaminophen and rest\",\n      \"quote\": \"Plan: Acetaminophen OTC and rest.\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_systemic\",\n      \"name\": \"Community-acquired pneumonia\",\n      \"quote\": \"Assessment: community-acquired pneumonia.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Fingerstick glucose\",\n      \"quote\": \"Ordered a fingerstick glucose, result positive.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"CBC\",\n      \"quote\": \"CBC was ordered and came back negative.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Pregnancy test\",\n      \"quote\": \"Pregnancy test was ordered and came back positive.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"hospitalization_or_escalation\",\n      \"name\": \"Send to emergency department\",\n      \"quote\": \"Sent to the emergency department for evaluation and possible admission.\"\n    }\n  ]\n}"
+}

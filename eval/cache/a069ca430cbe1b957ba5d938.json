@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"chronic_exacerbation\",\n      \"name\": \"migraine\",\n      \"quote\": \"migraine, worsening frequency, not responding to usual treatment\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"parenteral_controlled_substance\",\n      \"name\": \"ketorolac injection\",\n      \"quote\": \"ketorolac 30 mg IM given in clinic\"\n    },\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"rizatriptan prescription\",\n      \"quote\": \"rizatriptan prescribed to replace sumatriptan\"\n    }\n  ]\n}"
+}

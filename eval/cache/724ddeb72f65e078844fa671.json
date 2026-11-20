@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"threat_to_life_or_function\",\n      \"name\": \"acute coronary syndrome, suspected inferior STEMI\",\n      \"quote\": \"Assessment: acute coronary syndrome, suspected inferior STEMI.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"discussion_external\",\n      \"name\": \"receiving ED physician\",\n      \"quote\": \"Discussed with the receiving ED physician, Dr. Gomez.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"hospitalization_or_escalation\",\n      \"name\": \"emergency transfer to the ED\",\n      \"quote\": \"Called EMS for emergency transfer to the ED for possible cardiac catheterization and admission.\"\n    }\n  ]\n}"
+}

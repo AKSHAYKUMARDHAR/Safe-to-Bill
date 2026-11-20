@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_complicated_injury\",\n      \"name\": \"distal radius fracture\",\n      \"quote\": \"my interpretation: displaced distal radius fracture, radiologist report pending. Discussed with on-call orthopedics, Dr. Patel, who advised splinting\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"X-ray of right wrist\",\n      \"quote\": \"X-ray of the right wrist ordered; my interpretation: displaced distal radius fracture, radiologist report pending.\"\n    },\n    {\n      \"type\": \"independent_interpretation\",\n      \"name\": \"my read of the wrist X-ray\",\n      \"quote\": \"my interpretation: displaced distal radius fracture, radiologist report pending.\"\n    },\n    {\n      \"type\": \"discussion_external\",\n      \"name\": \"discussion with Dr. Patel\",\n      \"quote\": \"Discussed with on-call orthopedics, Dr. Patel, who advised splinting and clinic follow-up tomorrow for possible reduction.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"splint application\",\n      \"quote\": \"Sugar-tong splint applied.\"\n    },\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"naproxen prescription\",\n      \"quote\": \"Plan: naproxen 500 mg twice daily prescribed, ice, elevation, ortho follow-up tomorrow.\"\n    }\n  ]\n}"
+}

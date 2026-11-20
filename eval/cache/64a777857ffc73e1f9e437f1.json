@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"stable_chronic\",\n      \"name\": \"hypothyroidism\",\n      \"quote\": \"Assessment: hypothyroidism, stable on treatment; suspected acute coronary syndrome.\"\n    },\n    {\n      \"type\": \"threat_to_life_or_function\",\n      \"name\": \"suspected acute coronary syndrome\",\n      \"quote\": \"Assessment: hypothyroidism, stable on treatment; suspected acute coronary syndrome.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"independent_historian\",\n      \"name\": \"father\",\n      \"quote\": \"History obtained from father; the patient is too young to give a reliable history.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Urine culture\",\n      \"quote\": \"Urine culture ordered: negative.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"thyroid medication refill\",\n      \"quote\": \"4F with a thyroid medication refill and crushing chest pain with sweating.\"\n    },\n    {\n      \"type\": \"hospitalization_or_escalation\",\n      \"name\": \"transfer to ED\",\n      \"quote\": \"Plan: EMS called for transfer to the ED for admission.\"\n    }\n  ]\n}"
+}

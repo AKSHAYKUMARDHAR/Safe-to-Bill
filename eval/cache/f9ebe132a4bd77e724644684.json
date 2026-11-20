@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_complicated_injury\",\n      \"name\": \"dog bite\",\n      \"quote\": \"bitten on the back of the right hand by a neighbor's dog 2 hours ago. Two puncture wounds over the 3rd knuckle\"\n    },\n    {\n      \"type\": \"acute_complicated_injury\",\n      \"name\": \"possible tendon or joint involvement\",\n      \"quote\": \"pain when making a fist, concern for tendon or joint involvement\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"X-ray of the right hand\",\n      \"quote\": \"X-ray of the right hand ordered; radiology report reviewed: no fracture, no foreign body.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"amoxicillin-clavulanate\",\n      \"quote\": \"Plan: amoxicillin-clavulanate prescribed, hand surgery follow-up tomorrow.\"\n    }\n  ]\n}"
+}

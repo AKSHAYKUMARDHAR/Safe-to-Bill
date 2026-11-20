@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"acute otitis externa\",\n      \"quote\": \"Assessment: acute otitis externa, left. Plan: ciprofloxacin-dexamethasone otic drops prescribed, keep ear dry.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"ciprofloxacin-dexamethasone otic drops\",\n      \"quote\": \"Plan: ciprofloxacin-dexamethasone otic drops prescribed, keep ear dry.\"\n    }\n  ]\n}"
+}

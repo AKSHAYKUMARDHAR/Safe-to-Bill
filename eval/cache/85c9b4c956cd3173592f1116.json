@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_complicated_injury\",\n      \"name\": \"concussion with brief loss of consciousness\",\n      \"quote\": \"36M hit his head on a cabinet door yesterday and by his own account blacked out for a few seconds\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"CT head\",\n      \"quote\": \"CT head ordered given the loss of consciousness; radiology report reviewed: no acute intracranial findings\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"acetaminophen OTC and cognitive rest\",\n      \"quote\": \"Plan: acetaminophen OTC, cognitive rest, return precautions given\"\n    }\n  ]\n}"
+}

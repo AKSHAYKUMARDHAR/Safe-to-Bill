@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_uncomplicated\",\n      \"name\": \"viral pharyngitis\",\n      \"quote\": \"Assessment: viral pharyngitis\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Rapid strep\",\n      \"quote\": \"Rapid strep ordered: negative\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"ibuprofen\",\n      \"quote\": \"Plan: salt-water gargles, ibuprofen OTC\"\n    }\n  ]\n}"
+}

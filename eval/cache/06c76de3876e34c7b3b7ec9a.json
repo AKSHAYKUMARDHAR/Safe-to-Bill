@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_systemic\",\n      \"name\": \"community-acquired pneumonia\",\n      \"quote\": \"3 y/o M with fever to 103 and cough for 3 days. Assessment: community-acquired pneumonia.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"independent_historian\",\n      \"name\": \"history from father\",\n      \"quote\": \"History from father, since the patient is too young to describe his symptoms.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Rapid influenza and COVID-19 tests\",\n      \"quote\": \"Rapid influenza and COVID-19 tests ordered: both negative.\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Chest X-ray\",\n      \"quote\": \"Chest X-ray ordered; radiology report reviewed: right lower lobe consolidation.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"high-dose amoxicillin\",\n      \"quote\": \"Plan: high-dose amoxicillin prescribed, recheck in 48 hours.\"\n    }\n  ]\n}"
+}

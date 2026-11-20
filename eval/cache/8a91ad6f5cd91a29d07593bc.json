@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"chronic_severe_exacerbation\",\n      \"name\": \"severe asthma exacerbation\",\n      \"quote\": \"Assessment: severe asthma exacerbation, not responding to treatment.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"parenteral_controlled_substance\",\n      \"name\": \"methylprednisolone IM\",\n      \"quote\": \"Plan: methylprednisolone 125 mg IM given\"\n    },\n    {\n      \"type\": \"hospitalization_or_escalation\",\n      \"name\": \"transfer to ED\",\n      \"quote\": \"EMS called for transfer to the ED for admission.\"\n    }\n  ]\n}"
+}

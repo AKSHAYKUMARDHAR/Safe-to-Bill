@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"chronic_exacerbation\",\n      \"name\": \"COPD exacerbation\",\n      \"quote\": \"52M with COPD, 3 days of more shortness of breath and more sputum, now yellow. Assessment: COPD exacerbation.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Chest X-ray\",\n      \"quote\": \"Chest X-ray ordered; my read: hyperinflation, no infiltrate, no pneumothorax; radiology over-read pending.\"\n    },\n    {\n      \"type\": \"independent_interpretation\",\n      \"name\": \"Chest X-ray interpretation\",\n      \"quote\": \"my read: hyperinflation, no infiltrate, no pneumothorax; radiology over-read pending.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"prednisone and doxycycline\",\n      \"quote\": \"prednisone 40 mg daily for 5 days and doxycycline 100 mg twice daily for 5 days prescribed.\"\n    }\n  ]\n}"
+}

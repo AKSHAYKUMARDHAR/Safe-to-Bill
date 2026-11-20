@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"self_limited_minor\",\n      \"name\": \"splinter\",\n      \"quote\": \"7M with a splinter in the thumb. Assessment: splinter, removed.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"urine culture\",\n      \"quote\": \"Ordered a urine culture, result positive.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"minimal_risk\",\n      \"name\": \"rest\",\n      \"quote\": \"Plan: Acetaminophen OTC and rest.\"\n    },\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"Acetaminophen\",\n      \"quote\": \"Plan: Acetaminophen OTC and rest.\"\n    }\n  ]\n}"
+}

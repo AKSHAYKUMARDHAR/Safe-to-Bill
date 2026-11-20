@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_systemic\",\n      \"name\": \"community-acquired pneumonia\",\n      \"quote\": \"Assessment: community-acquired pneumonia.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Pregnancy test\",\n      \"quote\": \"Pregnancy test was ordered and came back negative.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"hospitalization_or_escalation\",\n      \"name\": \"transfer to the ED\",\n      \"quote\": \"Plan: EMS called for transfer to the ED for admission.\"\n    }\n  ]\n}"
+}

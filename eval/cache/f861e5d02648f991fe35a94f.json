@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 1,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"acute_complicated_injury\",\n      \"name\": \"distal radius fracture\",\n      \"quote\": \"Assessment: distal radius fracture.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"low_risk\",\n      \"name\": \"Ibuprofen\",\n      \"quote\": \"Plan: Ibuprofen OTC as needed.\"\n    }\n  ]\n}"
+}

@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"stable_acute\",\n      \"name\": \"cellulitis\",\n      \"quote\": \"cellulitis, improving on antibiotics (stable).\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"prescription_drug_management\",\n      \"name\": \"cephalexin\",\n      \"quote\": \"continue cephalexin 500 mg four times daily to complete 7 days\"\n    }\n  ]\n}"
+}

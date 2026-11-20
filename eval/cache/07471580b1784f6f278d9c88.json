@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"threat_to_life_or_function\",\n      \"name\": \"anaphylaxis\",\n      \"quote\": \"19M ate a cookie with peanuts 15 minutes ago, now lip swelling, hives, wheezing, BP 85/50. Assessment: anaphylaxis with hypotension.\"\n    }\n  ],\n  \"data\": [],\n  \"risk\": [\n    {\n      \"type\": \"parenteral_controlled_substance\",\n      \"name\": \"epinephrine administration\",\n      \"quote\": \"Epinephrine 0.5 mg IM given immediately, EMS called for transfer to the ED.\"\n    },\n    {\n      \"type\": \"hospitalization_or_escalation\",\n      \"name\": \"emergency transfer to ED\",\n      \"quote\": \"EMS called for transfer to the ED. Assessment: anaphylaxis with hypotension. Plan: emergency transfer; observed until EMS arrival.\"\n    }\n  ]\n}"
+}

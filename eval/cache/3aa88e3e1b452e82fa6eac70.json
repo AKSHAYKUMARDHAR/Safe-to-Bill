@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"threat_to_life_or_function\",\n      \"name\": \"suspected acute coronary syndrome\",\n      \"quote\": \"Assessment: suspected acute coronary syndrome; suspected acute stroke.\"\n    },\n    {\n      \"type\": \"threat_to_life_or_function\",\n      \"name\": \"suspected acute stroke\",\n      \"quote\": \"Assessment: suspected acute coronary syndrome; suspected acute stroke.\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"Fingerstick glucose\",\n      \"quote\": \"Fingerstick glucose ordered: normal.\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"hospitalization_or_escalation\",\n      \"name\": \"Sent to the emergency department\",\n      \"quote\": \"Plan: Sent to the emergency department for evaluation and possible admission.\"\n    }\n  ]\n}"
+}

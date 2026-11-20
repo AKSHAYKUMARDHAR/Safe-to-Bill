@@ -1,0 +1,7 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "prompt_version": "v1",
+ "temperature": 1.0,
+ "run": 0,
+ "response": "{\n  \"problems\": [\n    {\n      \"type\": \"threat_to_life_or_function\",\n      \"name\": \"suspected acute appendicitis\",\n      \"quote\": \"Assessment: suspected acute appendicitis. Plan: sent to the emergency department now for surgical evaluation; nothing by mouth\"\n    }\n  ],\n  \"data\": [\n    {\n      \"type\": \"order_test\",\n      \"name\": \"urine pregnancy test\",\n      \"quote\": \"Urine pregnancy test ordered: negative\"\n    },\n    {\n      \"type\": \"order_test\",\n      \"name\": \"urinalysis\",\n      \"quote\": \"Urinalysis ordered: normal\"\n    }\n  ],\n  \"risk\": [\n    {\n      \"type\": \"hospitalization_or_escalation\",\n      \"name\": \"referral to emergency department\",\n      \"quote\": \"Plan: sent to the emergency department now for surgical evaluation; nothing by mouth\"\n    }\n  ]\n}"
+}
