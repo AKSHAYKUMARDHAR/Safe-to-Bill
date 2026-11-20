@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-11-20T10:37:11+00:00",
+  "split": "holdout",
+  "n": 36,
+  "release": false,
+  "rescore": true,
+  "git_commit": "2120039",
+  "config": {
+    "model": "gemini-3.1-flash-lite",
+    "prompt_version": "v1",
+    "temperature": 1.0,
+    "ml_threshold": null,
+    "verifier": "v1"
+  },
+  "pipelines": {
+    "rules": {
+      "n": 36,
+      "level_accuracy": 1.0,
+      "decision_accuracy": 1.0,
+      "auto_bills": 19,
+      "wrong_auto_bills": 0,
+      "wrong_auto_bill_rate_95ci": [
+        0.0,
+        0.168
+      ],
+      "correct_claims": 19,
+      "correct_auto_billed": 19,
+      "automation": 1.0,
+      "overcoded": 12,
+      "overcoded_held": 12,
+      "undercoded": 5,
+      "undercoded_held": 5,
+      "not_confident": 0,
+      "errors": 0,
+      "quotes_not_in_note": 0,
+      "wrong_auto_bill_ids": [],
+      "gate": {
+        "wrong_auto_bills_zero": true,
+        "overcoded_held_all_but_one": true,
+        "automation_at_least_50pct": true,
+        "quotes_all_in_note": true
+      },
+      "gate_pass": true
+    },
+    "llm": {
+      "n": 36,
+      "level_accuracy": 0.944,
+      "decision_accuracy": 0.917,
+      "auto_bills": 16,
+      "wrong_auto_bills": 0,
+      "wrong_auto_bill_rate_95ci": [
+        0.0,
+        0.194
+      ],
+      "correct_claims": 19,
+      "correct_auto_billed": 16,
+      "automation": 0.842,
+      "overcoded": 12,
+      "overcoded_held": 12,
+      "undercoded": 5,
+      "undercoded_held": 5,
+      "not_confident": 5,
+      "errors": 0,
+      "quotes_not_in_note": 0,
+      "wrong_auto_bill_ids": [],
+      "gate": {
+        "wrong_auto_bills_zero": true,
+        "overcoded_held_all_but_one": true,
+        "automation_at_least_50pct": true,
+        "quotes_all_in_note": true
+      },
+      "gate_pass": true
+    },
+    "llm1": {
+      "n": 36,
+      "level_accuracy": 0.944,
+      "decision_accuracy": 0.944,
+      "auto_bills": 17,
+      "wrong_auto_bills": 0,
+      "wrong_auto_bill_rate_95ci": [
+        0.0,
+        0.184
+      ],
+      "correct_claims": 19,
+      "correct_auto_billed": 17,
+      "automation": 0.895,
+      "overcoded": 12,
+      "overcoded_held": 12,
+      "undercoded": 5,
+      "undercoded_held": 5,
+      "not_confident": 4,
+      "errors": 0,
+      "quotes_not_in_note": 0,
+      "wrong_auto_bill_ids": [],
+      "gate": {
+        "wrong_auto_bills_zero": true,
+        "overcoded_held_all_but_one": true,
+        "automation_at_least_50pct": true,
+        "quotes_all_in_note": true
+      },
+      "gate_pass": true
+    }
+  },
+  "llm_calls": 0,
+  "llm_cache_hits": 108
+}

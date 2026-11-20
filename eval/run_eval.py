@@ -92,7 +92,7 @@ def score_rows(rows: list[dict]) -> dict:
 
 
 def run(split: str, pipelines: list[str], limit: int | None, release: bool, rescore: bool,
-        cache_only: bool = False) -> dict:
+        cache_only: bool = False, verifier: str = "v3", tag: str = "dev") -> dict:
     recs = load_split(split)[: limit or None]
     llm = (LLMExtractor(cache_only=cache_only or rescore)
            if any(p.startswith("llm") for p in pipelines) else None)
@@ -102,14 +102,15 @@ def run(split: str, pipelines: list[str], limit: int | None, release: bool, resc
         "split": split, "n": len(recs), "release": release, "rescore": rescore,
         "git_commit": _git_commit(),
         "config": {"model": llm.model if llm else None, "prompt_version": PROMPT_VERSION,
-                   "temperature": TEMPERATURE, "ml_threshold": ml.threshold if ml else None},
+                   "temperature": TEMPERATURE, "ml_threshold": ml.threshold if ml else None,
+                   "verifier": verifier},
         "pipelines": {},
     }
     RESULTS.mkdir(parents=True, exist_ok=True)
     for pipeline in pipelines:
         rows = []
         for rec in recs:
-            res = check(rec["note"], rec["patient_type"], rec["billed_code"], pipeline, llm=llm, ml=ml)
+            res = check(rec["note"], rec["patient_type"], rec["billed_code"], pipeline, llm=llm, ml=ml, verifier=verifier)
             d = res["decision"]
             rows.append({
                 "id": rec["id"], "billed_code": rec["billed_code"], "label_code": rec["label"]["code"],
@@ -122,7 +123,7 @@ def run(split: str, pipelines: list[str], limit: int | None, release: bool, resc
                 "bad_quotes": sum(not quote_in_note(e["quote"], rec["note"]) for e in res["elements"]),
             })
             print(f"  {pipeline:5s} {rec['id']}: {d['action']} ({d['reason']})", flush=True)
-        with (RESULTS / f"{split}_{pipeline}.csv").open("w", newline="", encoding="utf-8") as f:
+        with (RESULTS / f"{split}_{tag}_{pipeline}.csv").open("w", newline="", encoding="utf-8") as f:
             w = csv.DictWriter(f, fieldnames=list(rows[0]))
             w.writeheader()
             w.writerows(rows)
@@ -161,6 +162,8 @@ def main() -> None:
     ap.add_argument("--rescore", action="store_true",
                     help="re-score cached answers after a release run (cache only, labelled post hoc)")
     ap.add_argument("--cache-only", action="store_true", help="never call the model; a cache miss is held")
+    ap.add_argument("--verifier", choices=["v1", "v2", "v3"], default="v3",
+                    help="v1 = release run 1; v2 = release run 2 (+ stitched quotes); v3 = current (+ copy-forward guard)")
     args = ap.parse_args()
 
     if args.split in HELD_OUT:
@@ -171,9 +174,12 @@ def main() -> None:
             sys.exit(f"A release run already exists ({done[-1].name}). Use --rescore to re-score cached answers.")
         if args.rescore and not done:
             sys.exit("Nothing to re-score: this split has no release run yet.")
-    log = run(args.split, args.pipelines.split(","), args.limit, args.release, args.rescore, args.cache_only)
-    RUNS.mkdir(parents=True, exist_ok=True)
     tag = "release" if args.release else ("rescore" if args.rescore else "dev")
+    if args.rescore:
+        tag = f"rescore-{args.verifier}"
+    log = run(args.split, args.pipelines.split(","), args.limit, args.release, args.rescore,
+              args.cache_only, args.verifier, tag)
+    RUNS.mkdir(parents=True, exist_ok=True)
     stamp = log["timestamp"].replace(":", "").replace("-", "")[:15]
     out = RUNS / f"{stamp}_{args.split}_{tag}.json"
     out.write_text(json.dumps(log, indent=2), encoding="utf-8")

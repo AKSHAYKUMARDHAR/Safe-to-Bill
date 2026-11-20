@@ -39,3 +39,15 @@ def test_decisions():
     assert decide("99213", "established", 2, False, "runs disagree").reason == "not_confident"
     assert decide("99203", "established", 2, True).reason == "wrong_family"
     assert decide("99285", "new", 2, True).reason == "unsupported_code"
+
+
+def test_copy_forward_problems_are_not_counted_in_v3():
+    from safe_to_bill.verify import verify as v
+    note = ("PMH (carried forward from prior visit): HTN, DM2; not addressed today.\n"
+            "A/P: acute bronchitis. Benzonatate prescribed.")
+    old = Element("problem", "stable_chronic", "htn", "PMH (carried forward from prior visit): HTN, DM2; not addressed today.")
+    new = Element("problem", "acute_uncomplicated", "bronchitis", "A/P: acute bronchitis.")
+    assert v([old, new], note, "v2")[0] == [old, new]
+    assert v([old, new], note, "v3") == ([new], [old])
+    hist = Element("problem", "chronic_exacerbation", "migraine", "33F with a history of migraines")
+    assert v([hist], "33F with a history of migraines, worse this week.", "v3")[0] == [hist]

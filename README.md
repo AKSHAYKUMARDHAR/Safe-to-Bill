@@ -4,12 +4,11 @@
 billed. Bill only the claims that are safe; hold the rest for a coder, with the reason and the
 note's own words.**
 
-**Status:** the shipped pipeline (LLM extraction + code checks + a deterministic AMA engine)
-**passed its release gate** on its first and only run on 36 held-out notes: **0 wrong auto-bills
-in 16**, all 12 overcoded and all 5 undercoded claims held, 16 of 19 correctly coded claims billed
-with no human touch. 36 synthetic notes are a small test: 0 in 16 still leaves a 95% upper bound of
-19% on the wrong-bill rate, so a pass means "ready for a larger shadow test", not "ready for
-production". Details and caveats below.
+**Status: blocked by its own release gate.** Release run 1 (36 held-out notes) passed: 0 wrong
+auto-bills in 16. Release run 2, on 24 fresh notes frozen and pushed before the run, **failed: 2
+wrong auto-bills in 13**. In both failures the two independent readings made the *same* mistake, so
+the agreement check could not catch it. That is the main finding, and the next version has to
+answer it. **[Explore every held-out note, decision and quote](https://akshaykumardhar.github.io/Safe-to-Bill/)**.
 
 ## Why
 
@@ -43,8 +42,6 @@ HOLD  overcoded (denial / audit risk) | undercoded (revenue left behind) | needs
 The model never picks the code: it reads, code checks and decides. Every element shown to a coder
 carries the note's own words, checked character for character.
 
-Three pipelines are scored on the same notes so each layer's value is measured:
-
 | | Pipeline | What it is |
 |---|---|---|
 | A | `rules` | keyword and pattern extraction + the same engine (deterministic baseline) |
@@ -52,78 +49,90 @@ Three pipelines are scored on the same notes so each layer's value is measured:
 | C | `llm` | **ships**: Gemini (`gemini-3.1-flash-lite`, free tier) extraction + quote checks + engine, two runs must agree |
 | C1 | `llm1` | C with one run, to measure what the second run adds |
 
+Quote verifier versions: **v1** exact quotes (release run 1); **v2** also accepts whole sentences
+stitched together in order (release run 2); **v3** also drops a problem quoted from a
+past-history line or marked "not addressed" (after run 2; post hoc only so far).
+
 ## Results
 
-### Release run: 36 held-out notes, run once (`eval/runs/20261120T093230_holdout_release.json`)
+Gate (PRD, written before run 1): 0 wrong auto-bills; all but one overcoded claim held; at least
+50% of correctly coded claims auto-billed; 0 quotes not in the note. A **wrong auto-bill** is a
+BILL on a claim whose billed code is not the code the note supports (by the hand label).
 
-19 correctly billed, 12 overcoded, 5 undercoded. Gate (written in the PRD before the run): 0 wrong
-auto-bills, at least 11 of 12 overcoded held, at least 50% of correct claims auto-billed, 0 quotes
-not in the note.
+### Release run 2: 24 fresh notes, run once, verifier v2 (`eval/runs/20261120T103455_holdout2_release.json`)
 
-| Pipeline | Level accuracy | Auto-bills | Wrong auto-bills (95% CI) | Correct claims auto-billed | Overcoded held | Undercoded held | Gate |
-|---|---|---|---|---|---|---|---|
-| A rules* | 100% | 19 | 0 (0-17%) | 19/19 | 12/12 | 5/5 | pass* |
-| B ml | 75% | 5 | 0 (0-43%) | 5/19 | 12/12 | 5/5 | **fail** |
-| **C llm (ships)** | **94%** | **16** | **0 (0-19%)** | **16/19** | **12/12** | **5/5** | **pass** |
-| C1 llm, one run | 94% | 17 | 0 (0-18%) | 17/19 | 12/12 | 5/5 | pass |
+12 correctly billed, 7 overcoded, 5 undercoded. Frozen and pushed at commit `c4bebe4` before the run.
 
-\* **The rules result is not evidence.** I wrote the rule patterns in the same session as the
-held-out notes and checked their wording against those notes while writing them. Treat A as an
-upper bound for a baseline that has seen the test, not as a fair comparison.
+| Pipeline | Level accuracy | Wrong auto-bills (95% CI) | Correct claims auto-billed | Overcoded held | Undercoded held | Gate |
+|---|---|---|---|---|---|---|
+| **C llm (ships)** | 83% | **2 of 13 (4-42%)** | 11/12 | 6/7 | 4/5 | **fail** |
+| C1 llm, one run | 83% | 2 of 13 | 11/12 | 6/7 | 4/5 | fail |
+| A rules | 83% | 1 of 11 | 10/12 | 6/7 | 5/5 | fail |
+| B ml | 67% | 0 of 0 | 0/12 | 7/7 | 5/5 | fail |
+| *C with verifier v3, post hoc* | *88%* | *1 of 12* | *11/12* | *7/7* | *4/5* | *fail* |
 
-### Dev runs (12 hand-written notes; 30 generated notes)
+### Release run 1: 36 held-out notes, run once, verifier v1 (`eval/runs/20261120T093230_holdout_release.json`)
 
-| Pipeline | Hand-written dev level acc | Auto-billed / correct | Generated dev level acc |
-|---|---|---|---|
-| A rules | 100% (also written against these notes) | 6/6 | 97% |
-| B ml | 67% | 2/6 | 77% (86% on all 200) |
-| C llm | 100% | 5/6 | 80% |
+19 correctly billed, 12 overcoded, 5 undercoded.
 
-No rule, prompt or threshold was changed after any of these runs. Prompt v1 is the only prompt.
+| Pipeline | Level accuracy | Wrong auto-bills (95% CI) | Correct claims auto-billed | Overcoded held | Undercoded held | Gate |
+|---|---|---|---|---|---|---|
+| **C llm (ships)** | 94% | **0 of 16 (0-19%)** | 16/19 | 12/12 | 5/5 | **pass** |
+| C1 llm, one run | 94% | 0 of 17 | 17/19 | 12/12 | 5/5 | pass |
+| A rules* | 100% | 0 of 19 | 19/19 | 12/12 | 5/5 | pass* |
+| B ml | 75% | 0 of 5 | 5/19 | 12/12 | 5/5 | fail |
+| *C with verifier v2 or v3, post hoc* | *100%* | *0 of 19* | *19/19* | *12/12* | *5/5* | *pass* |
+
+\* I wrote the rule patterns while reading these 36 notes, so A's run-1 score is not evidence.
+Run 2 is its fair test. Per-note results for run 1 were regenerated from the answer cache with
+verifier v1 and match the logged run exactly (`holdout_release-reproduced`); run 2 likewise
+(`holdout2_rescore-v2`).
 
 ## What the results say
 
-1. **The shipped pipeline never auto-billed a wrong level** in 16 held-out auto-bills (and 5 on dev).
-   It held every overcoded claim; 10 of the 12 were held as "overcoded" with the right supported
-   code, and 2 as "needs a coder". When it held an overcoded or undercoded claim, the supported
-   code it showed was right in 16 of 17.
-2. **Every miss was a safe one, and the commonest cause was quote stitching.** In 3 held-out notes
-   (H19, H35, H36) the model's quote for the problem joined the patient's first sentence to the
-   assessment line, skipping the text between them. The verifier rejected the quote, so no
-   problem survived and the claim was held. That cost 2 of the 3 correct claims it did not bill
-   (H19, H36); the third (H23) was the two readings disagreeing. The check did its job: an
-   unverifiable reading is never billed.
-3. **The second reading has not earned its cost yet.** Across all 48 hand-written notes the
-   single-run pipeline (C1) also made 0 wrong auto-bills; the second run held 2 claims that C1
-   billed correctly (D08, H23) and caught nothing. It stays in for now, because 48 notes cannot
-   show that a safety check is unnecessary, and it is the first thing the larger test should
-   measure. (Same lesson as my scam checker, where a third model run never changed a verdict.)
-4. **The classic ML baseline learned the template, not the rules.** Trained on generated notes,
-   it predicted 75% of hand-written levels; its probability gate kept it safe (0 wrong) but it billed
-   only 5 of 19 correct claims, failing the automation bar. E/M levels come from counting and
-   combining elements, which a bag-of-words classifier does not do; extracting elements and letting
-   code apply the AMA table generalises better on notes it has not seen.
-5. **Element errors** (shipped pipeline, run 1 vs labels): problems 33/36 (the 3 stitched quotes),
-   data 35/36, risk 32/36. None changed a billing decision in the wrong direction.
+1. **Agreement between two readings of the same model is not independence.** All four of the
+   shipped pipeline's misses in run 2 had both readings agreeing on the wrong answer. Across all
+   72 hand-written notes the second reading never prevented a wrong bill; the only claims it held
+   were 2 correct ones where the readings happened to vary (D08, H23).
+2. **Copy-forward history caused an overcoded claim to go out (R11).** Both readings counted three
+   chronic conditions from a past-medical-history line that itself says "not addressed today",
+   and the note was billed one level too high. This is the pattern payer audits look for. Verifier
+   v3 drops problems quoted from history lines; post hoc, R11 is held as overcoded.
+3. **A low-risk plan read as minimal let an undercoded claim go out (R16).** "Artificial tears OTC"
+   was rated minimal risk by both readings; the wrong level happened to equal the billed code.
+   Not fixed: one note is not a reason to change a rule, and fixing it against the test would be
+   fitting to it.
+4. **Holds need correct reasons too (R10).** Urosepsis with low blood pressure was read as
+   moderate instead of a threat to life. The claim was held, which is safe for billing, but the
+   hold said "overcoded, supports 99204": a coder who trusted it would downcode a correct claim.
+5. **Stitched quotes (run 1)** made 3 safe holds; verifier v2 fixed them post hoc. One survives in
+   run 2 (R15): the stitched piece "A/P: anaphylaxis." has 2 words, under the 3-word minimum,
+   so the claim was held.
+6. **The rules baseline, tested fairly, also failed** (R01: it auto-billed an overcoded common cold;
+   threats not on its word list, such as torsion and cauda equina, were held). **The ML baseline
+   learned the generator's templates**: it auto-billed nothing in run 2.
 
 ## Caveats
 
 - **Synthetic notes, written and labelled with Claude Code** against `docs/LABELLING.md`. **No
-  certified coder has reviewed the labels**; that is the first thing a real pilot needs.
-- **Same author for notes, rules and prompt.** The held-out notes were frozen (SHA-256 in
-  `docs/FREEZE.md`) before any rule, model or prompt ran on them, but the rules were written while
-  reading them (see the table note) and the prompt was written by the same author.
-- **Small:** 36 held-out notes cannot measure a low error rate; Wilson intervals are reported.
+  certified coder has reviewed the labels**; that is the first thing a real pilot needs. Held-out
+  labels are never changed after a run.
+- **Same author for notes, rules and prompt.** Run 2's notes were not checked against the rules
+  or prompt while being written, but they share an author.
+- **Small:** 60 held-out notes in two runs cannot measure a low error rate; Wilson intervals are reported.
 - **Scope:** office/outpatient E/M by MDM only. Not covered: time-based coding, procedures and
   modifiers, ICD-10 specificity, payer-specific rules such as urgent care S-codes.
-- Real notes are messier than these (copy-forward text, scribe output, templates).
 
 ## Next steps
 
-1. Fix quote stitching: ask for one contiguous span per quote, or verify a multi-sentence quote as
-   ordered fragments. Any re-score of the held-out answers will be labelled post hoc.
-2. Labels from a certified coder, and 100+ fresh notes for a second release run.
-3. Shadow mode on real claims with coders' final codes as labels; monitor holds, overcode catches
+1. **An independent second opinion**, not a second reading of the same model: a different model
+   family, or the rules engine as a floor for risk (an "OTC" plan is at least low risk), so that
+   a systematic misreading has to fool two different readers.
+2. Severity checks from structured data (vital signs that signal instability) before a hold
+   suggests a downcode.
+3. Labels from a certified coder, then 100+ fresh notes for release run 3 with v3 and the
+   independent check.
+4. Shadow mode on real claims with coders' final codes as labels; monitor holds, overcode catches
    and payer denial reason codes (835 remittance) weekly, per payer.
 
 ## Run it
@@ -135,8 +144,10 @@ cp .env.example .env                                   # add GEMINI_API_KEY for 
 
 python -m safe_to_bill.generator                       # 1,000 generated notes (seed 7)
 python -m safe_to_bill.ml_baseline                     # trains B, tunes its threshold
-pytest -q                                              # 69 offline tests (the LLM is faked)
-python -m eval.run_eval --split dev --pipelines rules,ml,llm,llm1   # re-scores from the answer cache
+pytest -q                                              # 97 offline tests (the LLM is faked)
+python -m eval.run_eval --split dev --pipelines rules,ml,llm,llm1 --cache-only
+python -m eval.run_eval --split holdout2 --pipelines rules,llm,llm1 --rescore --verifier v2   # reproduces run 2
+python -m eval.build_site                              # rebuilds the explorer (docs/index.html)
 
 uvicorn api.main:app --reload                          # POST /check, GET /stats, GET /health
 docker build -t safe-to-bill . && docker run -p 8000:8000 --env-file .env safe-to-bill
@@ -149,18 +160,23 @@ curl -X POST localhost:8000/check -H "Content-Type: application/json" -d '{
 # -> HOLD, overcoded: the note supports 99213 (one stable chronic illness + a refill)
 ```
 
-The API logs a SHA-256 of each note, never its text. Model answers used in evaluation are cached in
-`eval/cache/` (keyed by model, prompt version, run and note), so every run can be re-scored for free.
-CI runs the tests, re-scores the dev set from that cache with no API key, and builds the Docker image.
+The API logs a SHA-256 of each note, never its text. Model answers are cached in `eval/cache/`
+(keyed by model, prompt version, run and note), so every run can be re-scored for free and
+re-scoring never calls the model. CI runs the tests, re-scores the dev set from the cache with no
+API key, and builds the Docker image.
 
 ## Repo map
 
 | Path | What |
 |---|---|
-| `docs/PRD.md` | problem, users, metrics, release gate (written before the held-out run) |
+| `docs/PRD.md` | problem, users, metrics, release gate (written before run 1) |
+| `docs/RELEASE_2.md` | plan and gate for release run 2 (written before it) |
 | `docs/LABELLING.md` | the AMA MDM table as a labelling guide, with judgement calls |
-| `docs/FREEZE.md` | SHA-256 of the frozen data, guide, prompt and code before the release run |
-| `data/handwritten/` | 12 dev + 36 held-out notes with element-level labels |
+| `docs/FREEZE.md` | SHA-256 of the frozen notes, guide, prompt and code before each release run |
+| `docs/index.html` | the results explorer, built by `eval/build_site.py` |
+| `data/handwritten/` | 12 dev, 36 run-1 and 24 run-2 notes with element-level labels |
 | `safe_to_bill/` | engine, rules, LLM extractor, quote verifier, decision, ML baseline, generator |
 | `eval/` | evaluation harness, per-note results, run logs, model answer cache |
 | `api/` | FastAPI service |
+
+Notes, labels and code were written with Claude Code.

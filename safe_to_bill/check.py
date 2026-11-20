@@ -18,17 +18,18 @@ def _evidence(result: MDMResult) -> list[dict]:
 
 
 def check(note: str, patient_type: str, billed_code: str, pipeline: str = "llm", *,
-          llm: LLMExtractor | None = None, ml: MLBaseline | None = None) -> dict:
+          llm: LLMExtractor | None = None, ml: MLBaseline | None = None,
+          verifier: str = "v3") -> dict:
     if pipeline not in PIPELINES:
         raise ValueError(f"pipeline must be one of {PIPELINES}")
     if patient_type not in ("new", "established"):
         raise ValueError("patient_type must be 'new' or 'established'")
     t0 = time.perf_counter()
-    out: dict = {"pipeline": pipeline, "elements": [], "dropped_quotes": 0, "run_levels": []}
+    out: dict = {"pipeline": pipeline, "verifier": verifier, "elements": [], "dropped_quotes": 0, "run_levels": []}
     level, confident, why = None, False, ""
 
     if pipeline == "rules":
-        kept, dropped = verify(rules_extractor.extract(note), note)
+        kept, dropped = verify(rules_extractor.extract(note), note, verifier)
         result = score(kept)
         level, out["dropped_quotes"] = result.level, len(dropped)
         out.update(elements=_evidence(result), mdm=result.as_dict(), run_levels=[result.level])
@@ -48,7 +49,7 @@ def check(note: str, patient_type: str, billed_code: str, pipeline: str = "llm",
         results: list[MDMResult] = []
         try:
             for r in range(runs):
-                kept, dropped = verify(llm.extract(note, patient_type, run=r), note)
+                kept, dropped = verify(llm.extract(note, patient_type, run=r), note, verifier)
                 out["dropped_quotes"] += len(dropped)
                 results.append(score(kept))
         except LLMError as exc:

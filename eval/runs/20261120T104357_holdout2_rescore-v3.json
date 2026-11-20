@@ -1,0 +1,112 @@
+{
+  "timestamp": "2026-11-20T10:43:57+00:00",
+  "split": "holdout2",
+  "n": 24,
+  "release": false,
+  "rescore": true,
+  "git_commit": "2120039",
+  "config": {
+    "model": "gemini-3.1-flash-lite",
+    "prompt_version": "v1",
+    "temperature": 1.0,
+    "ml_threshold": null,
+    "verifier": "v3"
+  },
+  "pipelines": {
+    "rules": {
+      "n": 24,
+      "level_accuracy": 0.833,
+      "decision_accuracy": 0.875,
+      "auto_bills": 11,
+      "wrong_auto_bills": 1,
+      "wrong_auto_bill_rate_95ci": [
+        0.016,
+        0.377
+      ],
+      "correct_claims": 12,
+      "correct_auto_billed": 10,
+      "automation": 0.833,
+      "overcoded": 7,
+      "overcoded_held": 6,
+      "undercoded": 5,
+      "undercoded_held": 5,
+      "not_confident": 3,
+      "errors": 0,
+      "quotes_not_in_note": 0,
+      "wrong_auto_bill_ids": [
+        "R01"
+      ],
+      "gate": {
+        "wrong_auto_bills_zero": false,
+        "overcoded_held_all_but_one": true,
+        "automation_at_least_50pct": true,
+        "quotes_all_in_note": true
+      },
+      "gate_pass": false
+    },
+    "llm": {
+      "n": 24,
+      "level_accuracy": 0.875,
+      "decision_accuracy": 0.917,
+      "auto_bills": 12,
+      "wrong_auto_bills": 1,
+      "wrong_auto_bill_rate_95ci": [
+        0.015,
+        0.354
+      ],
+      "correct_claims": 12,
+      "correct_auto_billed": 11,
+      "automation": 0.917,
+      "overcoded": 7,
+      "overcoded_held": 7,
+      "undercoded": 5,
+      "undercoded_held": 4,
+      "not_confident": 2,
+      "errors": 0,
+      "quotes_not_in_note": 0,
+      "wrong_auto_bill_ids": [
+        "R16"
+      ],
+      "gate": {
+        "wrong_auto_bills_zero": false,
+        "overcoded_held_all_but_one": true,
+        "automation_at_least_50pct": true,
+        "quotes_all_in_note": true
+      },
+      "gate_pass": false
+    },
+    "llm1": {
+      "n": 24,
+      "level_accuracy": 0.875,
+      "decision_accuracy": 0.917,
+      "auto_bills": 12,
+      "wrong_auto_bills": 1,
+      "wrong_auto_bill_rate_95ci": [
+        0.015,
+        0.354
+      ],
+      "correct_claims": 12,
+      "correct_auto_billed": 11,
+      "automation": 0.917,
+      "overcoded": 7,
+      "overcoded_held": 7,
+      "undercoded": 5,
+      "undercoded_held": 4,
+      "not_confident": 2,
+      "errors": 0,
+      "quotes_not_in_note": 0,
+      "wrong_auto_bill_ids": [
+        "R16"
+      ],
+      "gate": {
+        "wrong_auto_bills_zero": false,
+        "overcoded_held_all_but_one": true,
+        "automation_at_least_50pct": true,
+        "quotes_all_in_note": true
+      },
+      "gate_pass": false
+    }
+  },
+  "llm_calls": 0,
+  "llm_cache_hits": 72
+}
